@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($check->fetch()) {
                 $error = "Un compte existe déjà avec cet email.";
             } else {
-                $hash = password_hash($password, PASSWORD_DEFAULT);
+                $hash = password_hash($password, PASSWORD_DEFAULT); //mot de passe crypté de php5
                 $stmt = $pdo->prepare('INSERT INTO customers (name, email, phone, address, password_hash) VALUES (?, ?, ?, ?, ?)');
                 $stmt->execute([$name, $email, $phone, $address, $hash]);
 

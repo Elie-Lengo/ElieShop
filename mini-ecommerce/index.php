@@ -33,7 +33,7 @@ $added = isset($_GET['added']);
     <main class="container">
 
         <?php if ($added): ?>
-            <div class="alert alert-success">Produit ajouté au panier ✅ — <a href="cart.php">Voir mon panier</a></div>
+            <div class="alert alert-success">Produit ajouté au panier ! — <a href="cart.php">Voir mon panier</a></div>
         <?php endif; ?>
 
         <div class="search-filters">
